@@ -19,7 +19,7 @@ Do the following:
 */
 let votingAge ='28'
 if(votingAge>= 18){
-  console.log(true)
+  console.log(true);
 }
 
 
@@ -37,7 +37,8 @@ Do the following:
 let num1 = 1
 let num2 = 2
 if (num1 === 1){
-  console.log(num1 = num1+num2)
+  num1 = num1+num2
+  console.log(num1)
 }
 
 
@@ -53,10 +54,8 @@ Do the following:
    HINT: look up the Number method
 */
 let year = "1999"
-var integer = parseInt(year, 10);
+var integer = parseInt(year);
 console.log(integer);
-
-
 
 /*
 Task 1d - Multiply
@@ -68,7 +67,7 @@ Do the following:
 */
 
 function multiply(a,b){
-    console.log(a*b);
+    return a*b;
   }
 multiply(2,4)
 
@@ -119,22 +118,31 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight, age){
-    if(age>=1)
-      if(weight<= 5)
-          console.log (weight*0.05);
-        if(weight>5 && weight < 11);
-          console.log (weight*.04);
-        if(weight>10 && weight<16);
-          console.log (weight*.03);
-        if(weight>15);
-          console.log (weight*.02);
-    if (age<1)
-      if(age<1 && age> .5)
-          console.log(weight*.04)
-      if(age<.58333 && age>=.333)
-        console.log(weight*.05)
-      if(age<=.333 && weight>=1.666)
-        console.log(weight*.1)
+    if(age>=1){
+      if(weight<= 5){
+          return (weight*0.05);
+        } 
+        else if(weight>5 && weight < 11);{
+          return (weight*.04);
+        }
+        if(weight>10 && weight<16);{
+          return (weight*.03);
+        }
+        if(weight>15);{
+          return (weight*.02);
+        }
+      }
+    if (age<1){
+      if(age<1 && age> .5){
+          return (weight*.04)
+      }
+      if(age<.58333 && age>=.333){
+        return (weight*.05)
+      }
+      if(age<=.333 && weight>=1.666){
+        return (weight*.1)
+      }
+    }
   }
 hungryDog(15,1)
 
@@ -159,42 +167,42 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-// let computer = Math.random();
-// function game(user, computer){
-//       if(computer <=.33){
-//         computer="rock"
-//       }
-//       if(computer<=.66 && computer >= .34){
-//         computer="paper"
-//       }
-//       if(computer>=.67){
-//         computer="scissors"
-//       }
-//       //Judge of game//
-//       if(user===computer){
-//         console.log("it's a tie");
-//       }
-//       if(user===scissors && computer===paper){
-//         console.log("you win!");
-//       }
-//       if(user===scissors && computer===rock){
-//         console.log("you lose!");
-//       }
-//       if(user===paper && computer===rock){
-//         console.log("you win!");
-//       }
-//       if(user===paper && computer===scissors){
-//         console.log("you lose!");
-//       }
-//       if(user===rock && computer===scissors){
-//         console.log("you win!");
-//       }
-//       if(user===rock &&computer===paper){
-//         console.log("you lose!");
-//       }
-//     }
+let computer = Math.random();
+function game(user, computer){
+      if(computer <=.33){
+        computer="rock"
+      }
+      else if(computer<=.66 && computer >= .34){
+        computer="paper"
+      }
+      else if(computer>=.67){
+        computer="scissors"
+      }
+      //Judge of game//
+      if(user===computer){
+        console.log("it's a tie");
+      }
+      else if(user==="scissors" && computer==="paper"){
+        console.log("you win!");
+      }
+      else if(user==="scissors" && computer==="rock"){
+        console.log("you lose!");
+      }
+      else if(user==="paper" && computer==="rock"){
+        console.log("you win!");
+      }
+      else if(user==="paper" && computer==="scissors"){
+        console.log("you lose!");
+      }
+      else if(user==="rock" && computer==="scissors"){
+        console.log("you win!");
+      }
+      else if(user==="rock" &&computer==="paper"){
+        console.log("you lose!");
+      }
+    }
 
-// game("scissors",computer);
+game("scissors",computer);
 
   
   
@@ -210,10 +218,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    return kilometers/1.609;
   }
-
+miles(10);
 
 
 //Task 5b - Feet to CM
@@ -224,10 +232,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(centimeters){
+    return centimeters/30.48;
   }
- 
+ feet(100);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -242,11 +250,9 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number){
       for(let i=number; i>0; i--){
-    console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`);
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;
   }
-  return;
 }
-return(annoyingSong(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
