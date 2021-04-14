@@ -183,7 +183,7 @@ if(computer <=.33){
 }
 computerinput(computer);
 function game(user, computer){
-      //Judge of game//
+      
       if(user===computer){
         console.log("it's a tie");
       }
