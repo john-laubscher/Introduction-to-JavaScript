@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge ='28'
+if(votingAge>= 18){
+  console.log(true)
+}
 
 
 /*
@@ -31,7 +34,11 @@ Do the following:
    HINT: no function required
 */
 
-
+let num1 = 1
+let num2 = 2
+if (num1 === 1){
+  console.log(num1 = num1+num2)
+}
 
 
 
@@ -45,7 +52,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let year = "1999"
+var integer = parseInt(year, 10);
+console.log(integer);
 
 
 
@@ -58,9 +67,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    console.log(a*b);
   }
+multiply(2,4)
 
 
 
@@ -74,10 +84,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(years){
+  console.log(years*7);
+    return (years*7);
 }
-
+dogYears(8)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,10 +118,25 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if(age>=1)
+      if(weight<= 5)
+          console.log (weight*0.05);
+        if(weight>5 && weight < 11);
+          console.log (weight*.04);
+        if(weight>10 && weight<16);
+          console.log (weight*.03);
+        if(weight>15);
+          console.log (weight*.02);
+    if (age<1)
+      if(age<1 && age> .5)
+          console.log(weight*.04)
+      if(age<.58333 && age>=.333)
+        console.log(weight*.05)
+      if(age<=.333 && weight>=1.666)
+        console.log(weight*.1)
   }
-
+hungryDog(15,1)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -133,10 +159,43 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+// let computer = Math.random();
+// function game(user, computer){
+//       if(computer <=.33){
+//         computer="rock"
+//       }
+//       if(computer<=.66 && computer >= .34){
+//         computer="paper"
+//       }
+//       if(computer>=.67){
+//         computer="scissors"
+//       }
+//       //Judge of game//
+//       if(user===computer){
+//         console.log("it's a tie");
+//       }
+//       if(user===scissors && computer===paper){
+//         console.log("you win!");
+//       }
+//       if(user===scissors && computer===rock){
+//         console.log("you lose!");
+//       }
+//       if(user===paper && computer===rock){
+//         console.log("you win!");
+//       }
+//       if(user===paper && computer===scissors){
+//         console.log("you lose!");
+//       }
+//       if(user===rock && computer===scissors){
+//         console.log("you win!");
+//       }
+//       if(user===rock &&computer===paper){
+//         console.log("you lose!");
+//       }
+//     }
 
-function game(user, computer){
-    /*add your code here*/
-}
+// game("scissors",computer);
+
   
   
 
@@ -181,10 +240,13 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+      for(let i=number; i>0; i--){
+    console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`);
   }
-
+  return;
+}
+return(annoyingSong(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -232,14 +294,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+// //export default{
+//     foo,
+//     multiply,
+//     dogYears,
+//     hungryDog,
+//     game,
+//     miles,
+//     feet,
+//     annoyingSong,
+//     grade
+//}
