@@ -122,13 +122,13 @@ function hungryDog(weight, age){
       if(weight<= 5){
           return (weight*0.05);
         } 
-        else if(weight>5 && weight < 11);{
+        else if(weight>5 && weight < 11){
           return (weight*.04);
         }
-        if(weight>10 && weight<=15);{
+        if(weight>10 && weight<=15){
           return (weight*.03);
         }
-        if(weight>=16);{
+        if(weight>=16){
           return (weight*.02);
         }
       }
@@ -169,7 +169,7 @@ Use the game function below to do the following:
 */
 
 var computer = Math.random();
-function computerinput(computer){
+
 if(computer <=.33){
   computer="rock"
   }
@@ -179,31 +179,30 @@ if(computer <=.33){
   else if(computer>=.67){
     computer="scissors"
   }
-  return computer
-}
-computerinput(computer);
+  
+
 function game(user, computer){
       
       if(user===computer){
-        console.log("it's a tie");
+        return"it's a tie";
       }
       else if(user==="scissors" && computer==="paper"){
-        console.log("you win!");
+        return"you win!";
       }
       else if(user==="scissors" && computer==="rock"){
-        console.log("you lose!");
+        return"you lose!";
       }
       else if(user==="paper" && computer==="rock"){
-        console.log("you win!");
+        return"you win!";
       }
       else if(user==="paper" && computer==="scissors"){
-        console.log("you lose!");
+        return"you lose!";
       }
       else if(user==="rock" && computer==="scissors"){
-        console.log("you win!");
+        return"you win!";
       }
       else if(user==="rock" &&computer==="paper"){
-        console.log("you lose!");
+        return"you lose!";
       }
     }
 
@@ -224,7 +223,7 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-    return kilometers/1.609344;
+    return kilometers * 0.621371;
   }
 miles(10);
 
